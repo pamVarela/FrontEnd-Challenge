@@ -129,11 +129,11 @@ footer {
 
 .form-control-lg {
   border-radius: 2px;
-  width: 40rem;
+  width: 41rem;
   font-size: 18px;
   border: none;
   position: relative;
-  right: 25px;
+  right: 40px;
   padding: 0.5rem 8px;
   height: 53px;
 }
