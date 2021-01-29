@@ -1,28 +1,22 @@
 function getInformation(emailParameter) {
-  let api_endpoint = "https://ltv-data-api.herokuapp.com/api/v1/records.json";
-  console.log(api_endpoint);
-
+  var result;
   $.ajax({
-    url: api_endpoint + "?email=" + emailParameter,
+    url: "https://ltv-data-api.herokuapp.com/api/v1/records.json", 
     contentType: "application/json",
     dataType: "json",
-    async: true,
-    success: function (result) {
-      if (result != []) {
-        console.log(result.leng);
-      }
+    async: false,
+    data: {
+        email : emailParameter
+    },
+    success: function (data) {
+      result = data;
     },
   });
+  return result;
 }
 
-const isFormatEmail = (email) => {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email)
-};
-
-
 $(document).ready(function () {
-  
+
   $("#search-input").validate({
     rules: {
         email: {
@@ -38,11 +32,14 @@ $(document).ready(function () {
     }      
   });
 
-  $("#btn-search").on("click", function (event) {
+  $("#btn-search").on("click", function () {
     var email = $("#input-email").val();
-    var form = $("#search-input")[0];
-
-    
+    var result = getInformation(email);
+    sessionStorage.setItem('data-email', JSON.stringify(result));
+    console.log(result)
+    $("#main").load('./../views/loading-spinner.html');
+    setTimeout(() =>{
+        $("#main").load('./../views/result.html');
+    },2000) 
   });
-    
 });
