@@ -23,43 +23,45 @@
     <title>Front-End Challenge - Pamela Varela</title>
 </head>
 
-<body style="background-color: #f6f6f6;">
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img class="img-logo" src="./../assets/Logo.png"></a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
-                        src="./../assets/icn_search.png"></a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
-                        src="./../assets/icn_person.png"></a>
-            </li>
-        </ul>
-    </nav>
-    <div id="resultsView">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="none-results" style="display: none;">
-                        <div class="text-center" style="padding-top: 15px; position: relative; top:25%">
-                            <h1 class="font-weight-bold blue-font">0 Results</h1>
-                            <p> Try starting a new search below</p>
+<body style="background-color: #f6f6f6;" class="d-flex flex-column">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img class="img-logo" src="./../assets/Logo.png"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
+                            src="./../assets/icn_search.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
+                            src="./../assets/icn_person.png"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="resultsView">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container" id="none-results" style="height: 50vh; display: none;">
+                            <div class="loader">
+                                <div class="text-center">
+                                    <h1 class="font-weight-bold blue-font" style="font-size: 3rem;">0 Results</h1>
+                                    <p> Try starting a new search below</p>
+                                </div>
+                            </div>   
                         </div>
-                    </div>
-
-                    <div id="loading" style="display: none;">
-                        <div class="loader">
-                            <img class="gif-loader" style="max-width: 8rem;" src="../assets/loading_spinner.gif" />
-                            <p class="text-loader font-weight-bold">Please wait a moment...</p>
+                        <div class="container" id="loader" style="height: 50vh; margin: 5vh; display: none;">
+                            <div class="loader" style="top: 20%;">
+                                <img class="gif-loader" style="max-width: 8rem;" src="../assets/loading_spinner.gif" />
+                                <p class="text-loader font-weight-bold">Please wait a moment...</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div id="has-results">
-                        <div class="container info-user">
+                        <div class="container info-user" id="has-results">
                             <div class="text-center">
-                                <h1 class="font-weight-bold blue-font" style="padding-top: 20px"> 1 Result</h1>
-                                <p> Look at the result below to see the details of the person you're searched for.</p>
+                                <h1 class="font-weight-bold blue-font" style="padding-top: 20px; font-size: 3rem;"> 1 Result</h1>
+                                <p id="text-results"> Look at the result below to see the details of the person you're searched for.</p>
                             </div>
                             <div class="card info">
                                 <div class="card-body">
@@ -84,7 +86,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row" style="position: relative; left: 30px;">
+                                        <div class="row" id="row-info">
                                             <div class="col-sm-1"></div>
                                             <div class="col-sm-5">
                                                 <h3 class="title-grid font-weight-bold">Address</h3>
@@ -99,14 +101,14 @@
                                             </div>
                                             <div class="col-sm-5">
                                                 <h3 class="title-grid font-weight-bold">Phone Numbers</h3>
-                                                <ul style="list-style-type: none;">
+                                                <ul class="numbers">
                                                     <li>(555)-55555</li>
                                                     <li>(555)-55555</li>
                                                     <li>(555)-55555</li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="row" style="position: relative; left: 30px;">
+                                        <div class="row" id="row-info">
                                             <div class="col-sm-1"></div>
                                             <div class="col-sm-5">
                                                 <h3 class="title-grid font-weight-bold">Email</h3>
@@ -116,7 +118,7 @@
                                             </div>
                                             <div class="col-sm-5">
                                                 <h3 class="title-grid font-weight-bold">Relatives</h3>
-                                                <ul style="list-style-type: none;">
+                                                <ul class="data-list">
                                                     <li>1</li>
                                                     <li>2</li>
                                                     <li>3</li>
@@ -129,33 +131,43 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="container-fluid header">
-                        <div class="text-center" style="padding-top: 15px;">
-                            <h1 class="font-weight-bold white-font">Can't Find The Right Person?</h1>
-                            <div class="text-header">
-                                <span class="font-weight-bold yellow-font">Try Again</span>
-                                <span class="white-font"> - Make a new search</span>
+                <div class="row">
+                    <div class="col-md-12" style="background: #004a80;">
+                        <div class="container second">
+                            <div class="text-center" style="padding-top: 15px;">
+                                <h1 class="font-weight-bold white-font" style="font-size: 3rem;">Can't Find The Right Person?</h1>
+                                <div class="text-header">
+                                    <span class="font-weight-bold yellow-font">Try Again</span>
+                                    <span class="white-font"> - Make a new search</span>
+                                </div>
+                                <div class="container" style="padding:2rem">
+                                    <div class="row">
+                                        <form id="search-input" class="form-inline input-group input-group-lg" novalidate>
+                                            <div class="col-lg-8">
+                                                <input class="form-control-lg" name="email" id="input-email" placeholder="email" type="email">
+                                                <p class="font-weight-bold yellow-font left" id="text-yellow">
+                                                    <img class="img-lock" src="./../assets/lock.png">Enter Any Email Address. They
+                                                    won't be
+                                                    notified.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-2" style="position: relative; right: 2rem;">
+                                                <button class="btn btn-light yellow-button" id="btn-search">
+                                                    <b>GO!</b>
+                                                </button>
+                                            </div>
+                                        </form>
+                                       
+                                    </div>
+                                </div>            
                             </div>
-                            <form class="form">
-                                <input class="form-control-lg" placeholder="EMAIL">
-                                <button class="btn btn-light yellow-button">
-                                    <b>GO!</b>
-                                </button>
-                            </form>
-                            <p class="font-weight-bold yellow-font left" style="font-size: 14px;">
-                                <img class="img-lock" src="./../assets/lock.png">Enter Any Email Address. They won't be
-                                notified.
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer id="footer" class="container-fluid">
+    </main>
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-10" style="margin-top: 10px;">
@@ -170,8 +182,8 @@
                         consequat.
                     </p>
                 </div>
-                <div class="col-sm" style="margin-top: 10px;">
-                    <a href="#" class="float-right font-weight-bold" style="color: #004a80; font-size: 14px;">
+                <div class="col-sm-2" >
+                    <a href="#" id="terms" class="float-right font-weight-bold">
                         Terms | Privacy
                     </a>
                 </div>

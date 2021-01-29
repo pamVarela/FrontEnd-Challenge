@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
@@ -19,188 +19,226 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../styles/styles.css">
-    <script src="./../js/main.js"></script>
+
     <title>Front-End Challenge - Pamela Varela</title>
+    <script src="./../js/main.js"></script>
 </head>
 
 <body style="background-color: #f6f6f6; ">
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img class="img-logo" src="./../assets/Logo.png"></a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
-                        src="./../assets/icn_search.png"></a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
-                        src="./../assets/icn_person.png"></a>
-            </li>
-        </ul>
-    </nav>
-    <div id="mainPage">
-        
-            <div class="container-fluid header">
-                <div class="text-center" style="padding-top: 15px;">
-                    <h1 class="font-weight-bold white-font">Search Any Email Address</h1>
-                    <div class="text-header">
-                        <span class="font-weight-bold yellow-font">Start Here</span>
-                        <span class="white-font"> - Look up the owner's name, photos and online profile. See what you
-                            find!</span>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img class="img-logo" src="./../assets/Logo.png"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
+                            src="./../assets/icn_search.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="navbar-brand navbar-right"><img class="img-icon"
+                            src="./../assets/icn_person.png"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="mainPage">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12" style="background: #004a80;margin-bottom: 1rem;">
+                        <div class="container-fluid header">
+                            <div class="text-center" style="padding-top: 15px;">
+                                <h1 class="font-weight-bold white-font" style=" font-size: 3rem;">Search Any Email
+                                    Address</h1>
+                                <div class="text-header">
+                                    <span class="font-weight-bold yellow-font">Start Here</span>
+                                    <span class="white-font"> - Look up the owner's name, photos and online profile. See
+                                        what you
+                                        find!</span>
+                                </div>
+                                <div class="container" style="padding:2rem">
+                                    <div class="row">
+                                        <form id="search-input" class="form-inline input-group input-group-lg" novalidate>
+                                            <div class="col-lg-8">
+                                                <input class="form-control-lg" name="email" id="input-email" placeholder="email" type="email">
+                                                <p class="font-weight-bold yellow-font left" id="text-yellow">
+                                                    <img class="img-lock" src="./../assets/lock.png">Enter Any Email Address. They
+                                                    won't be
+                                                    notified.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-2" style="position: relative; right: 5rem;">
+                                                <button class="btn btn-light yellow-button" id="btn-search">
+                                                    <b>GO!</b>
+                                                </button>
+                                            </div>
+                                        </form>
+                                       
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
                     </div>
-                    <form class="form">
-                        <input class="form-control-lg" placeholder="EMAIL">
-                        <button class="btn btn-light yellow-button">
-                            <b>GO!</b>
-                        </button>
-                    </form>
-                    <p class="font-weight-bold yellow-font left" style="font-size: 14px;">
-                        <img class="img-lock" src="./../assets/lock.png">Enter Any Email Address. They won't be
-                        notified.
-                    </p>
+                    <div class="col-sm-12">
+                        <div class="container-fluid" style="padding-top: 3rem;">
+                            <div class="text-center">
+                                <h1 class="font-weight-bold blue-font" style=" font-size: 3rem;">Reverse Email Lookup
+                                </h1>
+                                <div class="container info text-center">
+                                    <p class="text-information">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
+                                        incidunt
+                                        ut
+                                        labore et dolore
+                                        magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquid
+                                        ex ea
+                                        commodi
+                                        consequat.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="container table">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">1</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">4</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm col-md">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">2</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">5</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">3</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: inline-flex;">
+                                            <span class="circle">
+                                                <p class="circle-text">6</p>
+                                            </span>
+                                            <div style="display: table;">
+                                                <h5 class="title-grid">Lorem Ipsum</h5>
+                                                <p class="text-grid">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+                                                    tempor
+                                                    incidunt
+                                                    ut labore et dolore
+                                                    magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-      
-            <div class="container-fluid" style="padding-top: 3rem;">
-                <div class="text-center">
-                    <h1 class="font-weight-bold blue-font">Reverse Email Lookup</h1>
-                    <div class="container info">
-                        <p class="text-information">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut
-                            labore et dolore
-                            magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea
-                            commodi
-                            consequat.
-                        </p>
-                    </div>
-                    <div class="container mt-3" style="width: 55rem; padding-bottom: 4rem;">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">1</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">4</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm col-md">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">2</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">5</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">3</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div style="display: inline-flex;">
-                                    <span class="circle">
-                                        <p class="circle-text">6</p>
-                                    </span>
-                                    <div style="display: table;">
-                                        <h5 class="title-grid">Lorem Ipsum</h5>
-                                        <p class="text-grid">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor
-                                            incidunt
-                                            ut labore et dolore
-                                            magna
-                                            aliqua.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <footer id="footer" class="container-fluid">
+        </div>
+    </main>
+
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-10" style="margin-top: 10px;">
                     <p class="text-footer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut
+                        labore
                         et dolore
                         magna
                         aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea
+                        commodi
                         consequat.
                     </p>
                 </div>
                 <div class="col" style="margin-top: 10px;">
-                    <a href="#" class="float-right font-weight-bold" style="color: #004a80; font-size: 14px;">
+                    <a href="#" class="float-right font-weight-bold" id="terms">
                         Terms | Privacy
                     </a>
                 </div>
