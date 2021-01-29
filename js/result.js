@@ -1,3 +1,4 @@
+//function to get from the API the email
 function getInformation(emailParameter) {
   var result;
   $.ajax({
@@ -41,6 +42,7 @@ $(document).ready(function () {
     $("#none-results").show();
   }
 
+  //validation form
   $("#search-input").validate({
     rules: {
       email: {
@@ -56,10 +58,12 @@ $(document).ready(function () {
     },
   });
 
-  $("#btn-search").on("click", function () {
+  //function to call the button for search
+  $("#btn-search-2").on("click", function (e) {
     var email = $("#input-email").val();
     var result = getInformation(email);
     sessionStorage.setItem("data-email", JSON.stringify(result));
+    e.preventDefault();
 
     $("#has-results").hide();
     $("#none-results").hide();
@@ -68,6 +72,5 @@ $(document).ready(function () {
     setTimeout(() => {
       $("#main").load("./../views/result.html");
     }, 2000);
-    
   });
 });

@@ -10,7 +10,7 @@ body {
   width: 11rem;
   margin-bottom: 5px;
   position: relative;
-  left: 14rem;
+  left: 18rem;
 }
 
 .img-icon {
@@ -21,7 +21,7 @@ body {
 .navbar-nav {
   margin-left: auto;
   position: relative;
-  right: 14rem;
+  right: 20rem;
 }
 
 .img-lock {
@@ -33,7 +33,7 @@ body {
 
 .container-fluid.header {
   background: #004a80;
-  height: 17rem;
+  height: 20rem;
 }
 
 .container.header {
@@ -63,19 +63,20 @@ body {
 }
 
 .text-header {
-  font-size: 20px;
+  font-size: 21px;
   position: relative;
   right: 15px;
 }
+
 .font-weight-bold.yellow-font {
   color: #f5c533;
 }
 
-#text-yellow{
+#text-yellow {
   font-size: 14px;
-  margin-top: 15px;
-  right: 20px;
-  float: left;
+  margin-top: 2rem;
+  right: 3rem;
+  position: relative;
 }
 
 .font-weight-bold.blue-font {
@@ -145,7 +146,6 @@ footer {
   letter-spacing: 2px;
 }
 
-
 .text-information {
   color: #555c61;
   text-align: justify;
@@ -166,7 +166,7 @@ footer {
     #f3d64f,
     #eed254
   );
-  width: 112px;
+  width: 9rem;
   position: relative;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -176,7 +176,7 @@ footer {
   height: 55px;
   border: none;
   box-shadow: 0 0.2em #a6953b;
-  bottom:4.5px
+  bottom: 4.5px;
 }
 
 .btn.btn-light.yellow-button:hover {
@@ -199,20 +199,19 @@ footer {
   width: 10rem;
 }
 
-.error{
+.error {
   color: white;
-  right:0px;
+  right: 0px;
   position: relative;
   background: red;
   text-align: left;
   width: 16rem;
- 
 }
 
-.form-control-lg.error{
+.form-control-lg.error {
   color: black;
   background: white;
-  border: 3px solid red; 
+  border: 3px solid red;
   border-radius: 2px;
   width: 40rem;
   font-size: 18px;
@@ -266,7 +265,7 @@ span.circle.info {
   display: block;
 }
 
-.numbers li{
+.numbers li {
   color: #004a80;
   list-style-type: none;
   right: 40px;
@@ -299,14 +298,20 @@ span.circle.info {
   color: rgb(110, 106, 106);
 }
 
-#row-info{
-  position: relative; 
+#row-info {
+  position: relative;
   left: 30px;
 }
 
-#search-input{
+#search-input {
   position: relative;
   left: 130px;
+}
+
+.col-lg-2.yellow-button {
+  position: relative;
+  right: 4rem;
+  top: 1px;
 }
 
 /* For small devices as phones */
@@ -336,18 +341,24 @@ span.circle.info {
   }
 
   .container-fluid.header {
-    height: 80vh;
+    height: 105vh;
   }
 
   #input-email {
     max-width: 84vw;
-    left: 0px;
+    right: 30px;
   }
 
-  #btn-search {
-    margin-top: 2vw;
+  #btn-search-1 {
+    margin-top: 4vw;
     min-width: 84vw;
-    left: 0px;
+    left: 33px;
+  }
+
+  #btn-search-2 {
+    margin-top: 4vw;
+    min-width: 84vw;
+    left: 18px;
   }
 
   .font-weight-bold.yellow-font.left {
@@ -388,11 +399,11 @@ span.circle.info {
     display: none;
   }
 
-  #row-info{
+  #row-info {
     left: 0;
   }
 
-  .text-information{
+  .text-information {
     text-align: left;
   }
 
@@ -400,7 +411,19 @@ span.circle.info {
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
-  
+
+  #search-input {
+    position: static;
+  }
+
+  #text-yellow {
+    right: 0;
+  }
+
+  .error {
+    right: 30px;
+    width: 16.7rem;
+  }
 }
 
 /* For medium devices */
@@ -430,18 +453,11 @@ span.circle.info {
   }
 
   .container-fluid.header {
-    height: 65vh;
+    height: 100vh;
   }
 
   #input-email {
     max-width: 84vw;
-    left: 0px;
-  }
-
-  #btn-search {
-    margin-top: 2vw;
-    min-width: 84vw;
-    left: 0px;
   }
 
   .font-weight-bold.yellow-font.left {
@@ -467,9 +483,9 @@ span.circle.info {
   #terms {
     margin-top: 0px;
     position: relative;
-    right: 6rem;
+    right: 7rem;
   }
-
+  
   #text-results {
     text-align: left;
   }
@@ -482,11 +498,11 @@ span.circle.info {
     display: none;
   }
 
-  #row-info{
+  #row-info {
     left: 0;
   }
 
-  .text-information{
+  .text-information {
     text-align: left;
   }
 
@@ -495,10 +511,15 @@ span.circle.info {
     padding-bottom: 4vh;
   }
 
-  #search-input{
-    left: 0px;
-    right: 33px;
+  #search-input {
+    position: static;
   }
+
+  #text-yellow {
+    left: 0;
+  }
+
+  
 }
 
 /* tablets */
@@ -535,12 +556,20 @@ span.circle.info {
     height: 4rem;
   }
 
-  #btn-search {
+  #btn-search-1 {
     width: 10rem;
     height: 4rem;
-    left: 357px;
+    left: 21rem;
     min-width: 12vw;
-    bottom: 140px;
+    bottom: 66px;
+  }
+
+  #btn-search-2 {
+    width: 10rem;
+    height: 4rem;
+    left: 20rem;
+    min-width: 12vw;
+    bottom: 66px;
   }
 
   .font-weight-bold.yellow-font.left {
@@ -555,58 +584,44 @@ span.circle.info {
     width: revert;
   }
 
-  #terms{
+  #terms {
     margin-top: 1rem;
     right: -3rem;
   }
-
-  /* .form.search{
-    width: 44rem;
-  } */
 
   .container.second {
     padding-top: 8vh;
     padding-bottom: 8vh;
   }
 
-  #search-input{
+  #search-input {
     position: static;
   }
 
-  .error{
+  .error {
     color: white;
-    right:32px;
+    right: 32px;
     position: relative;
     background: red;
     text-align: left;
     width: 16rem;
-   
   }
-  
-  .form-control-lg.error{
+
+  .form-control-lg.error {
     color: black;
     background: white;
-    border: 3px solid red; 
+    border: 3px solid red;
     border-radius: 2px;
     width: 40rem;
     font-size: 18px;
     position: relative;
     right: 2rem;
   }
+
+  #text-yellow {
+    font-size: 14px;
+    margin-top: -2rem;
+    position: relative;
+    left: -185px;
+  }
 }
-
-/* 
-// Extra small devices (portrait phones, less than 576px)
-@media  { ... }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
