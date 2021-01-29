@@ -75,7 +75,7 @@ body {
 #text-yellow {
   font-size: 14px;
   margin-top: 2rem;
-  right: 3rem;
+  right: 70px;
   position: relative;
 }
 
@@ -427,7 +427,7 @@ span.circle.info {
 }
 
 /* For medium devices */
-@media screen and (min-width: 320.98px) and (max-width: 768.98px) {
+@media screen and (min-width: 320.98px) and (max-width: 767px) {
   .img-logo {
     width: 10rem;
     position: static;
@@ -485,7 +485,7 @@ span.circle.info {
     position: relative;
     right: 7rem;
   }
-  
+
   #text-results {
     text-align: left;
   }
@@ -518,8 +518,6 @@ span.circle.info {
   #text-yellow {
     left: 0;
   }
-
-  
 }
 
 /* tablets */
@@ -624,4 +622,17 @@ span.circle.info {
     position: relative;
     left: -185px;
   }
+
+  .container.info-user {
+    width: 95vw;
+  }
+
+  span.circle.info{
+    margin-right: 1rem;
+  }
+
+  #row-info {
+    left: 2.5rem;
+  }
+
 }
